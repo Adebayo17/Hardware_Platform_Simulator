@@ -15,11 +15,17 @@ class BUS : public SystemComponent
 		SystemComponent source;
 		std::list<DataValue> pendingData;
 		std::list<DataValue> readyData;
+		bool isBinded;
+		double counter;
 	
 	public:
 		BUS(const std::string& fileName);
     void simulate() override;
     DataValue read() override;
+    std::string getLabelFromSource();
+    void bind();
 };
 
 #endif
+
+

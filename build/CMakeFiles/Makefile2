@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gael/3A_SEI-soc/POO/Projet/hardware_platform
+CMAKE_SOURCE_DIR = /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gael/3A_SEI-soc/POO/Projet/hardware_platform/build
+CMAKE_BINARY_DIR = /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/Hardware_Platform_Simulator.dir/clean
 CMakeFiles/Hardware_Platform_Simulator.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/3A_SEI-soc/POO/Projet/hardware_platform/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Hardware_Platform_Simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Hardware_Platform_Simulator"
 .PHONY : CMakeFiles/Hardware_Platform_Simulator.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Hardware_Platform_Simulator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/3A_SEI-soc/POO/Projet/hardware_platform/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Hardware_Platform_Simulator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/3A_SEI-soc/POO/Projet/hardware_platform/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build/CMakeFiles 0
 .PHONY : CMakeFiles/Hardware_Platform_Simulator.dir/rule
 
 # Convenience name for target.

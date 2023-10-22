@@ -2,7 +2,8 @@
 #include <BUS_HPP>
 
 
-BUS::BUS(const std::string& fileName) {
+BUS::BUS(const std::string& fileName) 
+{
   //initialis� les cores et activ� le premier
 	std::ifstream file(fileName); 
 
@@ -11,8 +12,9 @@ BUS::BUS(const std::string& fileName) {
 	}
 
 	textfile = fileName;
+  isBinded = false;
+  counter = 0;
   
-
   std::string line;
   while (std::getline(file, line)) {
       std::istringstream lineStream(line);
@@ -42,3 +44,53 @@ BUS::BUS(const std::string& fileName) {
       }
   }
 }
+
+std::string BUS::getLabelFromSource()
+{
+	return source.getLabel();
+}
+
+void BUS::bind()
+{
+	isBinded = true;
+}
+
+void BUS::simulate()
+{
+	
+	for (DataValue data : pendingData) {
+		readyData.push_back(data);
+		pendingData.pop_front();
+  }
+  
+  for(double i=0; i<width; i++) {
+  	DataValue data;
+  	data = source.read();
+  	if(data.isValid()) {
+  		pendingData.push_back(data);
+  	}
+  	else {
+  		std::cerr << "Error : Invalid Data read from source : " << this.getLabelFromSource() << std::endl;
+  		break;
+  	}
+  	
+  }
+}
+
+DataValue BUS::read()
+{
+	DataValue data;
+	if(!readyData.empty()) {
+		data = readyData.front();
+		readyData.pop_front();
+		counter++;
+		return data;
+	}
+	else {
+		data = DataValue();	//default ctor (0.0, false)
+		return data;
+	}
+}
+
+
+

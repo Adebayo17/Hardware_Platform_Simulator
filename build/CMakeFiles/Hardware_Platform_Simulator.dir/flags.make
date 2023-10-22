@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gael/3A_SEI-soc/POO/Projet/hardware_platform/include -I/home/gael/3A_SEI-soc/POO/Projet/hardware_platform/src -I/home/gael/3A_SEI-soc/POO/Projet/hardware_platform/testdata
+CXX_INCLUDES = -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata
 
 CXX_FLAGS = 
 

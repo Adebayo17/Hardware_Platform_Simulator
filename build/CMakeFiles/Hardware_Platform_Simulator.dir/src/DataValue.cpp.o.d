@@ -1,5 +1,5 @@
 CMakeFiles/Hardware_Platform_Simulator.dir/src/DataValue.cpp.o: \
- /home/gael/3A_SEI-soc/POO/Projet/hardware_platform/src/DataValue.cpp \
+ /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/DataValue.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -146,4 +146,4 @@ CMakeFiles/Hardware_Platform_Simulator.dir/src/DataValue.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/gael/3A_SEI-soc/POO/Projet/hardware_platform/include/DataValue.hpp
+ /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include/DataValue.hpp

@@ -1,5 +1,5 @@
 CMakeFiles/Hardware_Platform_Simulator.dir/src/REGISTER.cpp.o: \
- /home/gael/3A_SEI-soc/POO/Projet/hardware_platform/src/REGISTER.cpp \
+ /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/REGISTER.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -150,4 +150,4 @@ CMakeFiles/Hardware_Platform_Simulator.dir/src/REGISTER.cpp.o: \
  /usr/include/c++/11/bits/allocated_ptr.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/list.tcc \
- /home/gael/3A_SEI-soc/POO/Projet/hardware_platform/include/REGISTER.hpp
+ /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include/REGISTER.hpp
