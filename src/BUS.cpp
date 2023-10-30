@@ -1,59 +1,72 @@
 #include <iostream>
-#include <BUS_HPP>
+#include <BUS.hpp>
 
 
 BUS::BUS(const std::string& fileName) 
 {
-  //initialis� les cores et activ� le premier
 	std::ifstream file(fileName); 
 
 	if (!file) {
-		std::cerr << "Error : Unable to open CPU build file." << std::endl;
+		std::cerr << "Error : Unable to open BUS build file." << std::endl;
 	}
 
-	textfile = fileName;
-  isBinded = false;
-  counter = 0;
+	textfile += fileName;
+    isBinded = false;
+    counter = 0;
   
-  std::string line;
-  while (std::getline(file, line)) {
-      std::istringstream lineStream(line);
-      std::string cle, valeur;
+    std::string line;
+    while (std::getline(file, line)) {
+        std::istringstream lineStream(line);
+        std::string cle, valeur;
 
-      if (std::getline(lineStream, cle, ':') && std::getline(lineStream, valeur)) {
-          cle.erase(0, cle.find_first_not_of(" \t"));
-          cle.erase(cle.find_last_not_of(" \t") + 1);
-          valeur.erase(0, valeur.find_first_not_of(" \t"));
-          valeur.erase(valeur.find_last_not_of(" \t") + 1);
+        if (std::getline(lineStream, cle, ':') && std::getline(lineStream, valeur)) {
+            cle.erase(0, cle.find_first_not_of(" \t"));
+            cle.erase(cle.find_last_not_of(" \t") + 1);
+            valeur.erase(0, valeur.find_first_not_of(" \t"));
+            valeur.erase(valeur.find_last_not_of(" \t") + 1);
 
-          if (cle == "TYPE") {
-              type = valeur;
-          }
-          else if (cle == "LABEL") {
-              label = valeur;
-          }
-          else if (cle == "WIDTH") {
-              width = std::stoi(valeur);
-          }
-          else if (cle == "SOURCE") {
-              source = SystemComponent(valeur);
-          }
-          else {
-              std::cerr << "Error : BUS's attribute undefine." << std::endl;
-          }
-      }
-  }
+            if (cle == "TYPE") {
+                type = valeur;
+            }
+            else if (cle == "LABEL") {
+                label = valeur;
+            }
+            else if (cle == "WIDTH") {
+                width = std::stoi(valeur);
+            }
+            else if (cle == "SOURCE") {
+                sourceLabel = valeur;
+            }
+            else {
+                std::cerr << "Error : BUS's attribute undefine." << std::endl;
+            }
+        }
+    }
 }
 
 std::string BUS::getLabelFromSource()
 {
-	return source.getLabel();
+	if(source != nullptr)
+    {
+        return source->getLabel();
+    }
+    return "No source bound.";
 }
 
-void BUS::bind()
+
+void BUS::bindToSource(SystemComponent* src)
 {
-	isBinded = true;
+    if(src->getLabel() == sourceLabel && (isBinded == false)){
+        source = src;
+        isBinded = true;
+    }
+    else {
+        std::cerr << "Source is not compatible" << std::endl;
+        isBinded = false;
+    }
+    
 }
+
 
 void BUS::simulate()
 {
@@ -61,20 +74,20 @@ void BUS::simulate()
 	for (DataValue data : pendingData) {
 		readyData.push_back(data);
 		pendingData.pop_front();
-  }
+    }
   
-  for(double i=0; i<width; i++) {
-  	DataValue data;
-  	data = source.read();
-  	if(data.isValid()) {
-  		pendingData.push_back(data);
-  	}
-  	else {
-  		std::cerr << "Error : Invalid Data read from source : " << this.getLabelFromSource() << std::endl;
-  		break;
-  	}
-  	
-  }
+    for(double i=0; i<width; i++) {
+        DataValue data;
+        data = source->read();
+        if(data.isValid()) {
+            pendingData.push_back(data);
+        }
+        else {
+            std::cerr << "Error : Invalid Data read from source : " << sourceLabel << std::endl;
+            break;
+        }
+        
+    }
 }
 
 DataValue BUS::read()

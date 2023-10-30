@@ -9,7 +9,8 @@ class SystemComponent {
 	protected:
 		std::string type;
 		std::string label;
-		std::string textfile;
+		std::string textfile = CMAKE_SOURCE_DIR;
+		std::string sourceLabel;
 	
 	public:
 		SystemComponent();
@@ -20,6 +21,10 @@ class SystemComponent {
 		std::string getLabel();
 		std::string getType();
 		std::string getTextfile();
+		std::string getSourceLabel();
+		//void setSourceLabel(std::string);
+		virtual void bindToSource(SystemComponent* src);
+		
 };
 
 #endif

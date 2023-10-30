@@ -19,7 +19,7 @@ CPU::CPU(const std::string& fileName) {
 		std::cerr << "Error : Unable to open CPU build file." << std::endl;
 	}
 
-	textfile = fileName;
+	textfile += fileName;
     activatedCore = 1;
 
     std::string line;
@@ -47,6 +47,9 @@ CPU::CPU(const std::string& fileName) {
             }
             else if (cle == "PROGRAM") {
                 program = Program(valeur);
+            }
+            else if (cle == "SOURCE") {
+                sourceLabel = valeur;
             }
             else {
                 std::cerr << "Error : CPU's attribute undefine." << std::endl;

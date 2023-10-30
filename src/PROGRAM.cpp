@@ -4,6 +4,7 @@
 #include <string>
 #include <functional>
 #include <PROGRAM.hpp>
+#include <filesystem>
 
 
 Program::Program() {
@@ -17,6 +18,12 @@ Program::Program(const std::string& fileName) : instructionPointer(0), programPa
 
 // Charge les instructions � partir d'un fichier
 void Program::loadProgramFromFile() {
+	// Utilisez std::filesystem pour construire le chemin complet
+	std::filesystem::path fullComponentPath = std::filesystem::path(CMAKE_SOURCE_DIR) / programPath;
+
+	// Convertissez le chemin complet en chaîne de caractères
+	programPath = fullComponentPath.string();
+	std::cout << programPath << std::endl;
 	std::ifstream file(programPath);
 	if (file.is_open()) {
 		std::string instructionStr;
@@ -60,7 +67,15 @@ Instruction Program::executeCurrentInstruction() {
 	if (instructionPointer < instructions.size()) {
 		return instructions[instructionPointer++];
 	}
-	
+	else {
+		return {
+			NOP,
+			nop,
+			0.0,
+			0.0,
+			0.0
+		};
+	}
 }
 
 double Program::executeInstruction() {
@@ -72,6 +87,7 @@ double Program::executeInstruction() {
 	}
 	else {
 		std::cerr << "Instructions's program terminated." << std::endl;
+		return NULL;
 	}
 }
 

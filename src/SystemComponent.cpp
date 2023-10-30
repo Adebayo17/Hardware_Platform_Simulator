@@ -26,5 +26,12 @@ std::string SystemComponent::getTextfile()
 	return textfile;
 }
 
+std::string SystemComponent::getSourceLabel()
+{
+	return sourceLabel;
+}
+
+
 void SystemComponent::simulate() {}
 DataValue SystemComponent::read() {}
+void SystemComponent::bindToSource(SystemComponent* src) {}

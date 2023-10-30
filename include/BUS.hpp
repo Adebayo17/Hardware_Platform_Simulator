@@ -7,12 +7,14 @@
 #include <sstream>
 #include <SystemComponent.hpp>
 #include <DataValue.hpp>
+#include <list>
 
 class BUS : public SystemComponent
 {
 	private:
 		double width;
-		SystemComponent source;
+		SystemComponent* source;
+		//std::string sourceLabel;
 		std::list<DataValue> pendingData;
 		std::list<DataValue> readyData;
 		bool isBinded;
@@ -20,10 +22,10 @@ class BUS : public SystemComponent
 	
 	public:
 		BUS(const std::string& fileName);
-    void simulate() override;
-    DataValue read() override;
-    std::string getLabelFromSource();
-    void bind();
+		void simulate() override;
+		DataValue read() override;
+		std::string getLabelFromSource();
+		void bindToSource(SystemComponent* src) override;
 };
 
 #endif

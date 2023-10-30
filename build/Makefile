@@ -153,6 +153,30 @@ Hardware_Platform_Simulator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/Hardware_Platform_Simulator.cpp.s
 .PHONY : Hardware_Platform_Simulator.cpp.s
 
+src/BUS.o: src/BUS.cpp.o
+.PHONY : src/BUS.o
+
+# target to build an object file
+src/BUS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o
+.PHONY : src/BUS.cpp.o
+
+src/BUS.i: src/BUS.cpp.i
+.PHONY : src/BUS.i
+
+# target to preprocess a source file
+src/BUS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.i
+.PHONY : src/BUS.cpp.i
+
+src/BUS.s: src/BUS.cpp.s
+.PHONY : src/BUS.s
+
+# target to generate assembly for a file
+src/BUS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.s
+.PHONY : src/BUS.cpp.s
+
 src/CPU.o: src/CPU.cpp.o
 .PHONY : src/CPU.o
 
@@ -177,6 +201,30 @@ src/CPU.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/CPU.cpp.s
 .PHONY : src/CPU.cpp.s
 
+src/DISPLAY.o: src/DISPLAY.cpp.o
+.PHONY : src/DISPLAY.o
+
+# target to build an object file
+src/DISPLAY.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o
+.PHONY : src/DISPLAY.cpp.o
+
+src/DISPLAY.i: src/DISPLAY.cpp.i
+.PHONY : src/DISPLAY.i
+
+# target to preprocess a source file
+src/DISPLAY.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.i
+.PHONY : src/DISPLAY.cpp.i
+
+src/DISPLAY.s: src/DISPLAY.cpp.s
+.PHONY : src/DISPLAY.s
+
+# target to generate assembly for a file
+src/DISPLAY.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.s
+.PHONY : src/DISPLAY.cpp.s
+
 src/DataValue.o: src/DataValue.cpp.o
 .PHONY : src/DataValue.o
 
@@ -200,6 +248,54 @@ src/DataValue.s: src/DataValue.cpp.s
 src/DataValue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/DataValue.cpp.s
 .PHONY : src/DataValue.cpp.s
+
+src/MEMORY.o: src/MEMORY.cpp.o
+.PHONY : src/MEMORY.o
+
+# target to build an object file
+src/MEMORY.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o
+.PHONY : src/MEMORY.cpp.o
+
+src/MEMORY.i: src/MEMORY.cpp.i
+.PHONY : src/MEMORY.i
+
+# target to preprocess a source file
+src/MEMORY.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.i
+.PHONY : src/MEMORY.cpp.i
+
+src/MEMORY.s: src/MEMORY.cpp.s
+.PHONY : src/MEMORY.s
+
+# target to generate assembly for a file
+src/MEMORY.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.s
+.PHONY : src/MEMORY.cpp.s
+
+src/PLATFORM.o: src/PLATFORM.cpp.o
+.PHONY : src/PLATFORM.o
+
+# target to build an object file
+src/PLATFORM.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o
+.PHONY : src/PLATFORM.cpp.o
+
+src/PLATFORM.i: src/PLATFORM.cpp.i
+.PHONY : src/PLATFORM.i
+
+# target to preprocess a source file
+src/PLATFORM.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.i
+.PHONY : src/PLATFORM.cpp.i
+
+src/PLATFORM.s: src/PLATFORM.cpp.s
+.PHONY : src/PLATFORM.s
+
+# target to generate assembly for a file
+src/PLATFORM.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hardware_Platform_Simulator.dir/build.make CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.s
+.PHONY : src/PLATFORM.cpp.s
 
 src/PROGRAM.o: src/PROGRAM.cpp.o
 .PHONY : src/PROGRAM.o
@@ -285,12 +381,24 @@ help:
 	@echo "... Hardware_Platform_Simulator.o"
 	@echo "... Hardware_Platform_Simulator.i"
 	@echo "... Hardware_Platform_Simulator.s"
+	@echo "... src/BUS.o"
+	@echo "... src/BUS.i"
+	@echo "... src/BUS.s"
 	@echo "... src/CPU.o"
 	@echo "... src/CPU.i"
 	@echo "... src/CPU.s"
+	@echo "... src/DISPLAY.o"
+	@echo "... src/DISPLAY.i"
+	@echo "... src/DISPLAY.s"
 	@echo "... src/DataValue.o"
 	@echo "... src/DataValue.i"
 	@echo "... src/DataValue.s"
+	@echo "... src/MEMORY.o"
+	@echo "... src/MEMORY.i"
+	@echo "... src/MEMORY.s"
+	@echo "... src/PLATFORM.o"
+	@echo "... src/PLATFORM.i"
+	@echo "... src/PLATFORM.s"
 	@echo "... src/PROGRAM.o"
 	@echo "... src/PROGRAM.i"
 	@echo "... src/PROGRAM.s"

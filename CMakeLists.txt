@@ -4,6 +4,7 @@
 # Date : 18 october 2023
 
 cmake_minimum_required (VERSION 3.12)
+add_definitions(-DCMAKE_SOURCE_DIR="${CMAKE_SOURCE_DIR}")
 
 project ("Hardware_Platform_Simulator")
 
@@ -15,6 +16,10 @@ set(SOURCES
     src/PROGRAM.cpp
     src/REGISTER.cpp
     src/SystemComponent.cpp
+    src/MEMORY.cpp
+    src/BUS.cpp
+    src/DISPLAY.cpp
+    src/PLATFORM.cpp 
 )
 
 # Définition des fichiers d'en-tête
@@ -25,6 +30,10 @@ set(HEADERS
     include/PROGRAM.hpp
     include/REGISTER.hpp
     include/SystemComponent.hpp
+    include/MEMORY.hpp
+    include/BUS.hpp
+    include/DISPLAY.hpp
+    include/PLATFORM.hpp 
 )
 
 # Ajouter l'exécutable
@@ -44,3 +53,5 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
 # Indiquez que le fichier Hardware_Platform_Simulator.cpp contient la fonction main
 set_target_properties(Hardware_Platform_Simulator PROPERTIES OUTPUT_NAME "Hardware_Platform_Simulator")
+
+message(STATUS "Chemin du répertoire racine du projet : ${CMAKE_SOURCE_DIR}")

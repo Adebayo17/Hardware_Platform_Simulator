@@ -153,6 +153,62 @@ CMakeFiles/Hardware_Platform_Simulator.dir/src/SystemComponent.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hardware_Platform_Simulator.dir/src/SystemComponent.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/SystemComponent.cpp -o CMakeFiles/Hardware_Platform_Simulator.dir/src/SystemComponent.cpp.s
 
+CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o: CMakeFiles/Hardware_Platform_Simulator.dir/flags.make
+CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o: ../src/MEMORY.cpp
+CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o: CMakeFiles/Hardware_Platform_Simulator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o -MF CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o.d -o CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/MEMORY.cpp
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/MEMORY.cpp > CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.i
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/MEMORY.cpp -o CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.s
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o: CMakeFiles/Hardware_Platform_Simulator.dir/flags.make
+CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o: ../src/BUS.cpp
+CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o: CMakeFiles/Hardware_Platform_Simulator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o -MF CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o.d -o CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/BUS.cpp
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/BUS.cpp > CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.i
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/BUS.cpp -o CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.s
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o: CMakeFiles/Hardware_Platform_Simulator.dir/flags.make
+CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o: ../src/DISPLAY.cpp
+CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o: CMakeFiles/Hardware_Platform_Simulator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o -MF CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o.d -o CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/DISPLAY.cpp
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/DISPLAY.cpp > CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.i
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/DISPLAY.cpp -o CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.s
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o: CMakeFiles/Hardware_Platform_Simulator.dir/flags.make
+CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o: ../src/PLATFORM.cpp
+CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o: CMakeFiles/Hardware_Platform_Simulator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o -MF CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o.d -o CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/PLATFORM.cpp
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/PLATFORM.cpp > CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.i
+
+CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/PLATFORM.cpp -o CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.s
+
 # Object files for target Hardware_Platform_Simulator
 Hardware_Platform_Simulator_OBJECTS = \
 "CMakeFiles/Hardware_Platform_Simulator.dir/Hardware_Platform_Simulator.cpp.o" \
@@ -160,7 +216,11 @@ Hardware_Platform_Simulator_OBJECTS = \
 "CMakeFiles/Hardware_Platform_Simulator.dir/src/DataValue.cpp.o" \
 "CMakeFiles/Hardware_Platform_Simulator.dir/src/PROGRAM.cpp.o" \
 "CMakeFiles/Hardware_Platform_Simulator.dir/src/REGISTER.cpp.o" \
-"CMakeFiles/Hardware_Platform_Simulator.dir/src/SystemComponent.cpp.o"
+"CMakeFiles/Hardware_Platform_Simulator.dir/src/SystemComponent.cpp.o" \
+"CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o" \
+"CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o" \
+"CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o" \
+"CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o"
 
 # External object files for target Hardware_Platform_Simulator
 Hardware_Platform_Simulator_EXTERNAL_OBJECTS =
@@ -171,9 +231,13 @@ Hardware_Platform_Simulator: CMakeFiles/Hardware_Platform_Simulator.dir/src/Data
 Hardware_Platform_Simulator: CMakeFiles/Hardware_Platform_Simulator.dir/src/PROGRAM.cpp.o
 Hardware_Platform_Simulator: CMakeFiles/Hardware_Platform_Simulator.dir/src/REGISTER.cpp.o
 Hardware_Platform_Simulator: CMakeFiles/Hardware_Platform_Simulator.dir/src/SystemComponent.cpp.o
+Hardware_Platform_Simulator: CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o
+Hardware_Platform_Simulator: CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o
+Hardware_Platform_Simulator: CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o
+Hardware_Platform_Simulator: CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o
 Hardware_Platform_Simulator: CMakeFiles/Hardware_Platform_Simulator.dir/build.make
 Hardware_Platform_Simulator: CMakeFiles/Hardware_Platform_Simulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Hardware_Platform_Simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Hardware_Platform_Simulator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Hardware_Platform_Simulator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

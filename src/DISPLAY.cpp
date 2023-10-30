@@ -1,7 +1,7 @@
-#include <MEMORY.hpp>
+#include <DISPLAY.hpp>
 #include <DataValue.hpp>
 
-MEMORY::MEMORY(const std::string& fileName) 
+DISPLAY::DISPLAY(const std::string& fileName) 
 {
 	std::ifstream file(fileName); 
 
@@ -11,8 +11,7 @@ MEMORY::MEMORY(const std::string& fileName)
 
 	textfile += fileName;
     isBinded = false;
-    memory_ptr = 0;
-    A = 0;
+    R = 0;
   
     std::string line;
     while (std::getline(file, line)) {
@@ -31,23 +30,20 @@ MEMORY::MEMORY(const std::string& fileName)
             else if (cle == "LABEL") {
                 label = valeur;
             }
-            else if (cle == "SIZE") {
-                size = std::stoi(valeur);
-            }
-            else if (cle == "ACCESS") {
-                access = std::stoi(valeur);
+            else if (cle == "REFRESH") {
+                refresh = std::stoi(valeur);
             }
             else if (cle == "SOURCE") {
                 sourceLabel = valeur;
             }
             else {
-                std::cerr << "Error : MEMORY's attribute undefine." << std::endl;
+                std::cerr << "Error : DISPLAY's attribute undefine." << std::endl;
             }
         }
     }
 }
 
-std::string MEMORY::getLabelFromSource()
+std::string DISPLAY::getLabelFromSource()
 {
 	if(source != nullptr)
     {
@@ -57,7 +53,7 @@ std::string MEMORY::getLabelFromSource()
 }
 
 
-void MEMORY::bindToSource(SystemComponent* src)
+void DISPLAY::bindToSource(SystemComponent* src)
 {
     if(src->getLabel() == sourceLabel && (isBinded == false)){
         source = src;
@@ -70,39 +66,27 @@ void MEMORY::bindToSource(SystemComponent* src)
     
 }
 
-void MEMORY::simulate() 
+void DISPLAY::simulate() 
 {
-    if (A == 0) {
-            // Réagit une fois sur A
-            A = access;
-            DataValue data;
-            do {
-                data = source->read();
-                if (data.isValid()) {
-                    memory[memory_ptr] = data.getValue();
-                    getNextFreeLocation();
-                }
-            } while (data.isValid());
-            
+    if (R == 0) {
+        // Réagit une fois sur R
+        R = refresh;
+        DataValue data;
+        do {
+            data = source->read();
+            if (data.isValid()) {
+                std::cout << ">> " << data.getValue() << " <<" << std::endl;
+            }
+        } while (data.isValid());    
     }
     else {
-        A--;
+        R--;
     }
 }
 
-void MEMORY::getNextFreeLocation()
-{
-    memory_ptr = (memory_ptr + 1) % size;
-}
 
-DataValue MEMORY::read()
+DataValue DISPLAY::read()
 {
-    if (memory[memory_ptr] != 0) {
-        double value = memory[memory_ptr];
-        getNextFreeLocation();
-        return DataValue(value, true);
-    }
-    else {
-        return DataValue(0.0, false); // Valeur invalide
-    }
+    DataValue data;
+    return data;
 }

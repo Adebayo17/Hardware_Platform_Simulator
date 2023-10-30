@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build",
+  "command": "/usr/bin/c++ -DCMAKE_SOURCE_DIR=\\\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator\\\" -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -g -o CMakeFiles/Hardware_Platform_Simulator.dir/Hardware_Platform_Simulator.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/Hardware_Platform_Simulator.cpp",
+  "file": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/Hardware_Platform_Simulator.cpp"
+},
+{
+  "directory": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build",
+  "command": "/usr/bin/c++ -DCMAKE_SOURCE_DIR=\\\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator\\\" -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -g -o CMakeFiles/Hardware_Platform_Simulator.dir/src/CPU.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/CPU.cpp",
+  "file": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/CPU.cpp"
+},
+{
+  "directory": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build",
+  "command": "/usr/bin/c++ -DCMAKE_SOURCE_DIR=\\\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator\\\" -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -g -o CMakeFiles/Hardware_Platform_Simulator.dir/src/DataValue.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/DataValue.cpp",
+  "file": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/DataValue.cpp"
+},
+{
+  "directory": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build",
+  "command": "/usr/bin/c++ -DCMAKE_SOURCE_DIR=\\\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator\\\" -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -g -o CMakeFiles/Hardware_Platform_Simulator.dir/src/PROGRAM.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/PROGRAM.cpp",
+  "file": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/PROGRAM.cpp"
+},
+{
+  "directory": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build",
+  "command": "/usr/bin/c++ -DCMAKE_SOURCE_DIR=\\\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator\\\" -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -g -o CMakeFiles/Hardware_Platform_Simulator.dir/src/REGISTER.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/REGISTER.cpp",
+  "file": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/REGISTER.cpp"
+},
+{
+  "directory": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build",
+  "command": "/usr/bin/c++ -DCMAKE_SOURCE_DIR=\\\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator\\\" -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -g -o CMakeFiles/Hardware_Platform_Simulator.dir/src/SystemComponent.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/SystemComponent.cpp",
+  "file": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/SystemComponent.cpp"
+},
+{
+  "directory": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build",
+  "command": "/usr/bin/c++ -DCMAKE_SOURCE_DIR=\\\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator\\\" -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -g -o CMakeFiles/Hardware_Platform_Simulator.dir/src/MEMORY.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/MEMORY.cpp",
+  "file": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/MEMORY.cpp"
+},
+{
+  "directory": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build",
+  "command": "/usr/bin/c++ -DCMAKE_SOURCE_DIR=\\\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator\\\" -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -g -o CMakeFiles/Hardware_Platform_Simulator.dir/src/BUS.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/BUS.cpp",
+  "file": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/BUS.cpp"
+},
+{
+  "directory": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build",
+  "command": "/usr/bin/c++ -DCMAKE_SOURCE_DIR=\\\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator\\\" -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -g -o CMakeFiles/Hardware_Platform_Simulator.dir/src/DISPLAY.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/DISPLAY.cpp",
+  "file": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/DISPLAY.cpp"
+},
+{
+  "directory": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/build",
+  "command": "/usr/bin/c++ -DCMAKE_SOURCE_DIR=\\\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator\\\" -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -g -o CMakeFiles/Hardware_Platform_Simulator.dir/src/PLATFORM.cpp.o -c /home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/PLATFORM.cpp",
+  "file": "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src/PLATFORM.cpp"
+}
+]
