@@ -10,5 +10,7 @@ int main()
 	std::string platformFilePath = CMAKE_SOURCE_DIR;
 	platformFilePath += "/testdata/platform.txt";
 	PLATFORM p1 = PLATFORM(platformFilePath);
+	p1.bindComponents();
+	p1.simulate();
 	return 0;
 }
