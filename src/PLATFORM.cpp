@@ -12,7 +12,7 @@
 PLATFORM::PLATFORM(const std::string& fileName) {
     std::ifstream file(fileName);
     if (!file) {
-        std::cerr << "Error: Unable to open PLATFORM build file." << std::endl;
+        std::cerr << "Error(from PLATFORM.cpp): Unable to open PLATFORM build file." << std::endl;
         return;
     }
 
@@ -28,7 +28,7 @@ PLATFORM::PLATFORM(const std::string& fileName) {
         
         std::ifstream componentFile(componentFilePath);
         if (!componentFile) {
-            std::cerr << "Error: Unable to open component file: " << componentFilePath << std::endl;
+            std::cerr << "Error(from PLATFORM.cpp): Unable to open component file: " << componentFilePath << std::endl;
             continue;
         }
 
@@ -65,6 +65,9 @@ PLATFORM::PLATFORM(const std::string& fileName) {
         else if (componentType == "DISPLAY") {
             component = new DISPLAY(componentFilePath);
         }
+        else {
+            std::cerr << "Error(from PLATFORM.cpp): SystemComponent unknown " << std::endl;
+        }
         // Ajoutez d'autres conditions pour les autres types de composants
 
         if (component) {
@@ -84,6 +87,7 @@ void PLATFORM::bindComponents()
             for (SystemComponent* targetComponent : components) {
                 if (targetComponent->getLabel() == sourceLabel) {
                     component->bindToSource(targetComponent);
+                    std::cout << "SystemComponent: " << component->getLabel() << " ... at " << component << " ... Source to bind is : " << targetComponent->getLabel() << " ... at " << targetComponent << std::endl;
                     break; // Nous avons trouvé la source, sortons de la boucle
                 }
             }

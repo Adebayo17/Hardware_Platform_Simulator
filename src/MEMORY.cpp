@@ -62,6 +62,7 @@ void MEMORY::bindToSource(SystemComponent* src)
     if(src->getLabel() == sourceLabel && (isBinded == false)){
         source = src;
         isBinded = true;
+        //std::cout << "SystemComponent: " << label << " ... Source at : " << source << std::endl;
     }
     else {
         std::cerr << "Source is not compatible" << std::endl;

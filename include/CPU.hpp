@@ -14,6 +14,7 @@ class CPU : public SystemComponent
 {
     private:
 	    double frequency;
+		double F;
 	    double cores;
 	    Program program;
 	    REGISTER cpuRegister;
@@ -25,6 +26,7 @@ class CPU : public SystemComponent
 	    void loadProgram();
 	    DataValue read() override;
         void simulate() override;
+		void activateNextCore();
 };
 
 #endif  

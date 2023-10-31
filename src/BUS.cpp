@@ -7,7 +7,7 @@ BUS::BUS(const std::string& fileName)
 	std::ifstream file(fileName); 
 
 	if (!file) {
-		std::cerr << "Error : Unable to open BUS build file." << std::endl;
+		std::cerr << "Error(from BUS.cpp) : Unable to open BUS build file." << std::endl;
 	}
 
 	textfile += fileName;
@@ -36,9 +36,10 @@ BUS::BUS(const std::string& fileName)
             }
             else if (cle == "SOURCE") {
                 sourceLabel = valeur;
+                
             }
             else {
-                std::cerr << "Error : BUS's attribute undefine." << std::endl;
+                std::cerr << "Error(from BUS.cpp) : BUS's attribute undefine." << std::endl;
             }
         }
     }
@@ -50,7 +51,7 @@ std::string BUS::getLabelFromSource()
     {
         return source->getLabel();
     }
-    return "No source bound.";
+    return "(from BUS.cpp) No source bound.";
 }
 
 
@@ -59,9 +60,10 @@ void BUS::bindToSource(SystemComponent* src)
     if(src->getLabel() == sourceLabel && (isBinded == false)){
         source = src;
         isBinded = true;
+        //std::cout << "SystemComponent: " << label << " ... Source at : " << source << std::endl;
     }
     else {
-        std::cerr << "Source is not compatible" << std::endl;
+        std::cerr << "(from BUS.cpp) Source is not compatible" << std::endl;
         isBinded = false;
     }
     
@@ -70,24 +72,26 @@ void BUS::bindToSource(SystemComponent* src)
 
 void BUS::simulate()
 {
+	if(isBinded) {
+        for (DataValue data : pendingData) {
+            readyData.push_back(data);
+            pendingData.pop_front();
+        }
+        for(double i=0; i<width; i++) {
+            DataValue data;
+            data = source->read();
+            if(data.isValid()) {
+                pendingData.push_back(data);
+            }
+            else {
+                std::cerr << "Error(from BUS.cpp) : Invalid Data read from source : " << sourceLabel << std::endl;
+                break;
+            }  
+        }
+    } else {
+        std::cerr << "(from BUS.cpp) No source bound." << std::endl;
+    }
 	
-	for (DataValue data : pendingData) {
-		readyData.push_back(data);
-		pendingData.pop_front();
-    }
-  
-    for(double i=0; i<width; i++) {
-        DataValue data;
-        data = source->read();
-        if(data.isValid()) {
-            pendingData.push_back(data);
-        }
-        else {
-            std::cerr << "Error : Invalid Data read from source : " << sourceLabel << std::endl;
-            break;
-        }
-        
-    }
 }
 
 DataValue BUS::read()

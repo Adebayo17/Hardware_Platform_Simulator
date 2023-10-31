@@ -15,7 +15,6 @@ class DISPLAY : public SystemComponent
     private:
         int refresh;
         SystemComponent* source;
-        //std::string sourceLabel;
         bool isBinded;
         int R;
 

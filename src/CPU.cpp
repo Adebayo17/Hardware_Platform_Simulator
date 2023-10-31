@@ -16,11 +16,12 @@ CPU::CPU(const std::string& fileName) {
 	std::ifstream file(fileName); 
 
 	if (!file) {
-		std::cerr << "Error : Unable to open CPU build file." << std::endl;
+		std::cerr << "Error(from CPU.cpp) : Unable to open CPU build file." << std::endl;
 	}
 
 	textfile += fileName;
     activatedCore = 1;
+    F = 0;
 
     std::string line;
     while (std::getline(file, line)) {
@@ -52,21 +53,31 @@ CPU::CPU(const std::string& fileName) {
                 sourceLabel = valeur;
             }
             else {
-                std::cerr << "Error : CPU's attribute undefine." << std::endl;
+                std::cerr << "Error(from CPU.cpp) : CPU's attribute undefine." << std::endl;
             }
         }
     }
 }
 
 void CPU::simulate() {
-    double f = 0;
     double instructionResult;
-    while (f < frequency) {
-        instructionResult = program.executeInstruction();
-        cpuRegister.write(instructionResult);
-        f++;
+    for(int i=0; i < frequency; i++)
+    {
+        if(program.allInstructionsExecuted()) {
+            if(activatedCore < cores) {
+                activateNextCore();
+                program.reset();
+                instructionResult = program.executeInstruction();
+                cpuRegister.write(instructionResult);
+            } else {
+                std::cout << "Program terminated from " << label << std::endl;
+                return;
+            }
+        } else {
+            instructionResult = program.executeInstruction();
+            cpuRegister.write(instructionResult);
+        }
     }
-
 }
 
 void CPU::loadProgram()
@@ -79,11 +90,17 @@ DataValue CPU::read()
 	DataValue data;
 	if(!cpuRegister.isEmpty()) {
 		data = DataValue(cpuRegister.read(), true);
+        std::cout << data.getValue() << data.isValid() << std::endl;
 		return data;
 	}
 	else {
 		data = DataValue();	//default ctor (0.0, false)
 		return data;
 	}
+}
+
+void CPU::activateNextCore()
+{
+    activatedCore++;
 }
 

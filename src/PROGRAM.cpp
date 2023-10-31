@@ -50,7 +50,7 @@ void Program::loadProgramFromFile() {
 				instruction.operation = nop;
 			}
 			else {
-				std::cerr << "Error : Instructions unknown." << std::endl;
+				std::cerr << "Error(from PROGRAM.cpp) : Instructions unknown." << std::endl;
 			}
 			file >> instruction.operand1 >> instruction.operand2;
 			instructions.push_back(instruction);
@@ -58,11 +58,11 @@ void Program::loadProgramFromFile() {
 		file.close();
 	}
 	else {
-		std::cerr << "Error : Unable to open PROGRAM build file." << std::endl;
+		std::cerr << "Error(from PROGRAM.cpp) : Unable to open PROGRAM build file." << std::endl;
 	}
 }
 
-// Ex�cute l'instruction courante et avance le pointeur d'instruction
+// Execute current instruction courante and incremente le pointeur d'instruction
 Instruction Program::executeCurrentInstruction() {
 	if (instructionPointer < instructions.size()) {
 		return instructions[instructionPointer++];
@@ -86,17 +86,17 @@ double Program::executeInstruction() {
 		return instruction.result;
 	}
 	else {
-		std::cerr << "Instructions's program terminated." << std::endl;
+		std::cerr << "(from PROGRAM.cpp) Instructions's program terminated." << std::endl;
 		return NULL;
 	}
 }
 
-// V�rifie si toutes les instructions ont �t� ex�cut�es
+// Verify if all instructions are executed
 bool Program::allInstructionsExecuted() const {
 	return instructionPointer >= instructions.size();
 }
 
-// R�initialise le pointeur d'instruction
+// Reinitialise le pointeur d'instruction
 void Program::reset() {
 	instructionPointer = 0;
 }
