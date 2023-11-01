@@ -10,7 +10,7 @@
 // Enumération des types d'instructions possibles
 enum InstructionType {
     ADD,
-    SUB,
+    SUB, 
     MUL,
     DIV,
     NOP
@@ -52,6 +52,7 @@ class Program {
 		double executeInstruction();
 		bool allInstructionsExecuted() const;
 		void reset();
+        void printProgramInstruction();
 };
 
 #endif

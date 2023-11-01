@@ -24,12 +24,13 @@ PLATFORM::PLATFORM(const std::string& fileName) {
         // Convertissez le chemin complet en chaîne de caractères
         componentFilePath = fullComponentPath.string();
         
-        std::cout << componentFilePath << std::endl;
+        //print component file path
+        //std::cout << componentFilePath << std::endl;
         
         std::ifstream componentFile(componentFilePath);
         if (!componentFile) {
             std::cerr << "Error(from PLATFORM.cpp): Unable to open component file: " << componentFilePath << std::endl;
-            continue;
+            return;
         }
 
         std::string line;
@@ -68,14 +69,15 @@ PLATFORM::PLATFORM(const std::string& fileName) {
         else {
             std::cerr << "Error(from PLATFORM.cpp): SystemComponent unknown " << std::endl;
         }
-        // Ajoutez d'autres conditions pour les autres types de composants
 
         if (component) {
             components.push_back(component);
+            std::cout << "SystemComponent: " << component->getLabel() << " ... at " << component << std::endl;
         }
     }
 
     numberOfComponents = components.size();
+    std::cout << std::endl;
 }
 
 void PLATFORM::bindComponents()

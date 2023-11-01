@@ -12,7 +12,7 @@ CPU::CPU() {}
 
 
 CPU::CPU(const std::string& fileName) {
-    //initialis� les cores et activ� le premier
+
 	std::ifstream file(fileName); 
 
 	if (!file) {
@@ -76,6 +76,7 @@ void CPU::simulate() {
         } else {
             instructionResult = program.executeInstruction();
             cpuRegister.write(instructionResult);
+            //program.printProgramInstruction();
         }
     }
 }

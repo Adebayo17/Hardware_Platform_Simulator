@@ -73,9 +73,13 @@ void BUS::bindToSource(SystemComponent* src)
 void BUS::simulate()
 {
 	if(isBinded) {
-        for (DataValue data : pendingData) {
+        /*for (DataValue data : pendingData) {
             readyData.push_back(data);
             pendingData.pop_front();
+        }*/
+        for (auto it = pendingData.begin(); it != pendingData.end(); ) {
+            readyData.push_back(std::move(*it)); // Utilise std::move pour transférer les éléments
+            it = pendingData.erase(it); // Supprime l'élément de pendingData et met à jour l'itérateur
         }
         for(double i=0; i<width; i++) {
             DataValue data;

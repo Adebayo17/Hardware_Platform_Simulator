@@ -1885,7 +1885,12 @@ CMakeFiles/Hardware_Platform_Simulator.dir/src/REGISTER.cpp.o: ../src/REGISTER.c
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/list.tcc \
-  ../include/REGISTER.hpp
+  ../include/REGISTER.hpp \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc
 
 CMakeFiles/Hardware_Platform_Simulator.dir/src/SystemComponent.cpp.o: ../src/SystemComponent.cpp \
   /usr/include/stdc-predef.h \

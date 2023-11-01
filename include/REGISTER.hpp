@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <list>
+#include <vector>
 
 class REGISTER {
     private:
@@ -23,6 +24,8 @@ class REGISTER {
 
         // size of register
         double size();
+
+        void getRegister();
 };
 
 #endif

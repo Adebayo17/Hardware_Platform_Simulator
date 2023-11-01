@@ -18,6 +18,7 @@ class MEMORY : public SystemComponent
 		int A;
 		bool isBinded;
 		std::vector<double> memory;
+		std::vector<int> memoryCount;
 		SystemComponent* source;
 		//std::string sourceLabel;
 		int memory_ptr;

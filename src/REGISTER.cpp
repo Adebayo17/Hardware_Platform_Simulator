@@ -34,3 +34,11 @@ double REGISTER::size() {
 	return registerList.size();
 }
 
+void REGISTER::getRegister()
+{
+	for(double data : registerList){
+		std::cout << data << "; ";
+	}
+	std::cout << std::endl;
+}
+

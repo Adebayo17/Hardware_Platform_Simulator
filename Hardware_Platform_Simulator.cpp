@@ -5,8 +5,6 @@
 
 int main() 
 {
-	//std::cout << "Hello CMake." << std::endl;
-	//testDataValue();
 	std::string platformFilePath = CMAKE_SOURCE_DIR;
 	platformFilePath += "/testdata/platform.txt";
 	PLATFORM p1 = PLATFORM(platformFilePath);

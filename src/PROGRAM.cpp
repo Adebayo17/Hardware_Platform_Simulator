@@ -16,14 +16,17 @@ Program::Program(const std::string& fileName) : instructionPointer(0), programPa
 	loadProgramFromFile();
 }
 
-// Charge les instructions � partir d'un fichier
+// load instructions from file
 void Program::loadProgramFromFile() {
 	// Utilisez std::filesystem pour construire le chemin complet
 	std::filesystem::path fullComponentPath = std::filesystem::path(CMAKE_SOURCE_DIR) / programPath;
 
 	// Convertissez le chemin complet en chaîne de caractères
 	programPath = fullComponentPath.string();
-	std::cout << programPath << std::endl;
+	
+	//print program path
+	//std::cout << programPath << std::endl;
+	
 	std::ifstream file(programPath);
 	if (file.is_open()) {
 		std::string instructionStr;
@@ -101,10 +104,35 @@ void Program::reset() {
 	instructionPointer = 0;
 }
 
+void Program::printProgramInstruction()
+{
+	Instruction instr = instructions[instructionPointer];
+	std::cout << instr.type << " " << instr.operation << " " << instr.operand1 << " " << instr.operand2 << " --> " << instr.result << std::endl;
+}
 
 // Définir des fonctions pour chaque instruction
-double addition(double a, double b) { return a + b; }
-double soustraction(double a, double b) { return a - b; }
-double multiplication(double a, double b) { return a * b; }
-double division(double a, double b) { return a / b; }
-double nop(double a, double b) { return 0; }
+double addition(double a, double b) 
+{ 
+	return a + b; 
+}
+double soustraction(double a, double b) 
+{ 
+	return a - b; 
+}
+double multiplication(double a, double b) 
+{ 
+	return a * b; 
+}
+double division(double a, double b) 
+{ 
+	if (b != 0) {
+        return a / b;
+    } else {
+        std::cerr << "Erreur : Division par zéro." << std::endl;
+        return 0.0;
+    } 
+}
+double nop(double a, double b) 
+{ 
+	return 0; 
+}

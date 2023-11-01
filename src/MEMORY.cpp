@@ -80,7 +80,11 @@ void MEMORY::simulate()
             do {
                 data = source->read();
                 if (data.isValid()) {
+                    //writing in the memory
                     memory[memory_ptr] = data.getValue();
+                    //initialize the count
+                    memoryCount[memory_ptr] = 0;
+                    //maj memery_ptr
                     getNextFreeLocation();
                 }
             } while (data.isValid());
@@ -98,9 +102,10 @@ void MEMORY::getNextFreeLocation()
 
 DataValue MEMORY::read()
 {
-    if (memory[memory_ptr] != 0) {
+    if (memoryCount[memory_ptr] < 1) {
         double value = memory[memory_ptr];
-        getNextFreeLocation();
+        memoryCount[memory_ptr]++;
+        //getNextFreeLocation();
         return DataValue(value, true);
     }
     else {
