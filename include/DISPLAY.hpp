@@ -14,7 +14,7 @@ class DISPLAY : public SystemComponent
 {
     private:
         int refresh;
-        SystemComponent* source;
+        //SystemComponent* source;
         bool isBinded;
         int R;
 

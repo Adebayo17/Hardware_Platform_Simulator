@@ -13,7 +13,7 @@ class BUS : public SystemComponent
 {
 	private:
 		double width;
-		SystemComponent* source;
+		//SystemComponent* source;
 		//std::string sourceLabel;
 		std::list<DataValue> pendingData;
 		std::list<DataValue> readyData;

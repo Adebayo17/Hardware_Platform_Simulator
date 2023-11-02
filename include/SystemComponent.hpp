@@ -11,6 +11,7 @@ class SystemComponent {
 		std::string label;
 		std::string textfile = CMAKE_SOURCE_DIR;
 		std::string sourceLabel;
+		SystemComponent* source = nullptr;
 	
 	public:
 		SystemComponent();

@@ -5,12 +5,12 @@
 
 SystemComponent::SystemComponent() {}
 
-SystemComponent::SystemComponent(std::string type, std::string label, std::string textfile) 
+/*SystemComponent::SystemComponent(std::string type, std::string label, std::string textfile) 
 	: type(type), label(label), textfile(textfile) {}
 	
 SystemComponent::SystemComponent(std::string label) 
 	: label(label){}
-
+*/
 std::string SystemComponent::getLabel()
 {
 	return label;

@@ -38,15 +38,13 @@ struct Instruction {
 
 class Program {
     private:
-        std::vector<Instruction> instructions; // Liste des instructions
-        size_t instructionPointer; // Pointeur d'instruction
+        std::vector<Instruction> instructions;
+        size_t instructionPointer;
         std::string programPath;
 
     public:
-        // Constructeur
         Program();
         Program(const std::string& fileName);
-		
 		void loadProgramFromFile();
 		Instruction executeCurrentInstruction();
 		double executeInstruction();

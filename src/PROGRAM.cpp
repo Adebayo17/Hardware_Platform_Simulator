@@ -66,7 +66,7 @@ void Program::loadProgramFromFile() {
 }
 
 // Execute current instruction courante and incremente le pointeur d'instruction
-Instruction Program::executeCurrentInstruction() {
+/*Instruction Program::executeCurrentInstruction() {
 	if (instructionPointer < instructions.size()) {
 		return instructions[instructionPointer++];
 	}
@@ -79,7 +79,7 @@ Instruction Program::executeCurrentInstruction() {
 			0.0
 		};
 	}
-}
+}*/
 
 double Program::executeInstruction() {
 	if (instructionPointer < instructions.size()) {

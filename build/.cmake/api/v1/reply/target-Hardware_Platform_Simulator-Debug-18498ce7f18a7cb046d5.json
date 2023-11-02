@@ -52,6 +52,12 @@
 				"file" : 0,
 				"line" : 46,
 				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 47,
+				"parent" : 0
 			}
 		]
 	},
@@ -84,6 +90,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/diagram"
 				}
 			],
 			"language" : "CXX",

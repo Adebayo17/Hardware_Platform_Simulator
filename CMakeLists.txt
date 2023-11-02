@@ -44,7 +44,7 @@ add_executable(Hardware_Platform_Simulator ${SOURCES} ${HEADERS})
 target_include_directories(Hardware_Platform_Simulator PRIVATE "include")
 target_include_directories(Hardware_Platform_Simulator PRIVATE "src")
 target_include_directories(Hardware_Platform_Simulator PRIVATE "testdata")
-
+target_include_directories(Hardware_Platform_Simulator PRIVATE "diagram")
 
 # Vous pouvez ajouter d'autres configurations ici, par exemple des options de compilation, des bibliothèques, etc.
 
