@@ -33,6 +33,8 @@ MEMORY::MEMORY(const std::string& fileName)
             }
             else if (cle == "SIZE") {
                 size = std::stoi(valeur);
+                memory.resize(size);
+                memoryCount.resize(size, 0);
             }
             else if (cle == "ACCESS") {
                 access = std::stoi(valeur);

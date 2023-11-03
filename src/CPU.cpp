@@ -60,25 +60,28 @@ CPU::CPU(const std::string& fileName) {
 }
 
 void CPU::simulate() {
-    double instructionResult;
-    for(int i=0; i < frequency; i++)
-    {
-        if(program.allInstructionsExecuted()) {
-            if(activatedCore < cores) {
-                activateNextCore();
-                program.reset();
+    while(activatedCore != cores){
+        double instructionResult;
+        for(int i=0; i < frequency; i++)
+        {
+            if(program.allInstructionsExecuted()) {
+                if(activatedCore < cores) {
+                    activateNextCore();
+                    program.reset();
+                    instructionResult = program.executeInstruction();
+                    cpuRegister.write(instructionResult);
+                } else {
+                    std::cout << "Program terminated from " << label << std::endl;
+                    return;
+                }
+            } else {
                 instructionResult = program.executeInstruction();
                 cpuRegister.write(instructionResult);
-            } else {
-                std::cout << "Program terminated from " << label << std::endl;
-                return;
+                //program.printProgramInstruction();
             }
-        } else {
-            instructionResult = program.executeInstruction();
-            cpuRegister.write(instructionResult);
-            //program.printProgramInstruction();
         }
     }
+    
 }
 
 void CPU::loadProgram()

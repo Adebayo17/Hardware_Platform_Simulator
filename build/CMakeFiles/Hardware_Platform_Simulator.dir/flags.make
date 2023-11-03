@@ -6,5 +6,5 @@ CXX_DEFINES = -DCMAKE_SOURCE_DIR=\"/home/gael/3A_SEI-soc/POO/Projet/Hardware_Pla
 
 CXX_INCLUDES = -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/include -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/src -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/testdata -I/home/gael/3A_SEI-soc/POO/Projet/Hardware_Platform_Simulator/diagram
 
-CXX_FLAGS = -g
+CXX_FLAGS = 
 
