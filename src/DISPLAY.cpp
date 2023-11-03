@@ -68,8 +68,10 @@ void DISPLAY::bindToSource(SystemComponent* src)
 
 void DISPLAY::simulate() 
 {
+    std::cout << "DISPLAY : " << label << " is simulated." << std::endl;
     if (R == 0) {
         // Réagit une fois sur R
+        std::cout << "Can display " << std::endl; 
         R = refresh;
         DataValue data;
         do {
@@ -80,6 +82,7 @@ void DISPLAY::simulate()
         } while (data.isValid());    
     }
     else {
+        std::cout << ">> " << "Wait before displaying " << " <<" << std::endl; 
         R--;
     }
 }

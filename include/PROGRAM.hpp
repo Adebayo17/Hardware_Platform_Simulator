@@ -46,11 +46,10 @@ class Program {
         Program();
         Program(const std::string& fileName);
 		void loadProgramFromFile();
-		Instruction executeCurrentInstruction();
-		double executeInstruction();
+		double compute();
 		bool allInstructionsExecuted() const;
 		void reset();
-        void printProgramInstruction();
+        //void printProgramInstruction();
 };
 
 #endif

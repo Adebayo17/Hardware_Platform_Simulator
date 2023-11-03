@@ -37,8 +37,12 @@ double REGISTER::size() {
 void REGISTER::getRegister()
 {
 	for(double data : registerList){
-		std::cout << data << "; ";
+		std::cout << data << "; " << std::endl;
 	}
 	std::cout << std::endl;
 }
 
+void REGISTER::resize(size_t newSize)
+{
+	registerList.resize(newSize);
+}

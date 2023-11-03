@@ -33,5 +33,10 @@ std::string SystemComponent::getSourceLabel()
 
 
 void SystemComponent::simulate() {}
-DataValue SystemComponent::read() {}
+
+DataValue SystemComponent::read() 
+{
+	DataValue data;
+	return data;
+}
 void SystemComponent::bindToSource(SystemComponent* src) {}

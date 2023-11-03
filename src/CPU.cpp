@@ -60,28 +60,37 @@ CPU::CPU(const std::string& fileName) {
 }
 
 void CPU::simulate() {
-    while(activatedCore != cores){
-        double instructionResult;
-        for(int i=0; i < frequency; i++)
-        {
-            if(program.allInstructionsExecuted()) {
-                if(activatedCore < cores) {
-                    activateNextCore();
-                    program.reset();
-                    instructionResult = program.executeInstruction();
-                    cpuRegister.write(instructionResult);
-                } else {
-                    std::cout << "Program terminated from " << label << std::endl;
-                    return;
-                }
-            } else {
-                instructionResult = program.executeInstruction();
+    std::cout << "CPU : " << label << " is simulated. AcitvatedCore : " << activatedCore << std::endl << std::endl;
+    double instructionResult;
+    for(int i=0; i < frequency; i++)
+    {
+        if(program.allInstructionsExecuted()) {
+            if(activatedCore < cores) {
+                std::cout << "activatedCore : " << activatedCore << std::endl;
+                std::cout << "Register size : " << cpuRegister.size() << std::endl;
+                std::cout << std::endl;
+                activateNextCore();
+                program.reset();
+                instructionResult = program.compute();
                 cpuRegister.write(instructionResult);
-                //program.printProgramInstruction();
+            } else {
+                std::cout << "activatedCore : " << activatedCore << std::endl;
+                std::cout << "Register size : " << cpuRegister.size() << std::endl;
+                //cpuRegister.getRegister();
+                std::cout << "Program terminated from " << label << std::endl;
+                std::cout << std::endl;
+                return;
             }
+        } else {
+            instructionResult = program.compute();
+            cpuRegister.write(instructionResult);
+            std::cout << "activatedCore : " << activatedCore << std::endl;
+            std::cout << "Register size : " << cpuRegister.size() << std::endl;
+            //cpuRegister.getRegister();
+            std::cout << std::endl;
         }
     }
-    
+    //while(activatedCore <= cores){}
 }
 
 void CPU::loadProgram()
@@ -94,7 +103,7 @@ DataValue CPU::read()
 	DataValue data;
 	if(!cpuRegister.isEmpty()) {
 		data = DataValue(cpuRegister.read(), true);
-        std::cout << data.getValue() << data.isValid() << std::endl;
+        std::cout << "CPU.read : " << label << "; activatedCore : " << activatedCore << "; Data to read : " << data.getValue() << " " << data.isValid() << std::endl;
 		return data;
 	}
 	else {

@@ -66,22 +66,7 @@ void Program::loadProgramFromFile() {
 }
 
 // Execute current instruction courante and incremente le pointeur d'instruction
-/*Instruction Program::executeCurrentInstruction() {
-	if (instructionPointer < instructions.size()) {
-		return instructions[instructionPointer++];
-	}
-	else {
-		return {
-			NOP,
-			nop,
-			0.0,
-			0.0,
-			0.0
-		};
-	}
-}*/
-
-double Program::executeInstruction() {
+double Program::compute() {
 	if (instructionPointer < instructions.size()) {
 		Instruction instruction = instructions[instructionPointer];
 		instruction.result = instruction.operation(instruction.operand1, instruction.operand2);
@@ -90,7 +75,7 @@ double Program::executeInstruction() {
 	}
 	else {
 		std::cerr << "(from PROGRAM.cpp) Instructions's program terminated." << std::endl;
-		return NULL;
+		return double(NULL);
 	}
 }
 
@@ -103,12 +88,13 @@ bool Program::allInstructionsExecuted() const {
 void Program::reset() {
 	instructionPointer = 0;
 }
-
+/*
 void Program::printProgramInstruction()
 {
 	Instruction instr = instructions[instructionPointer];
 	std::cout << instr.type << " " << instr.operation << " " << instr.operand1 << " " << instr.operand2 << " --> " << instr.result << std::endl;
 }
+*/
 
 // Définir des fonctions pour chaque instruction
 double addition(double a, double b) 

@@ -75,6 +75,7 @@ void MEMORY::bindToSource(SystemComponent* src)
 
 void MEMORY::simulate() 
 {
+    std::cout << "MEMORY : " << label << " is simulated." << std::endl;
     if (A == 0) {
             // Réagit une fois sur A
             A = access;
@@ -88,6 +89,7 @@ void MEMORY::simulate()
                     memoryCount[memory_ptr] = 0;
                     //maj memery_ptr
                     getNextFreeLocation();
+                    getMemory();
                 }
             } while (data.isValid());
             
@@ -104,13 +106,28 @@ void MEMORY::getNextFreeLocation()
 
 DataValue MEMORY::read()
 {
+    std::cout << "MEMORY : " << label << " is being read at " << memory_ptr << std::endl;
+    getMemory();
     if (memoryCount[memory_ptr] < 1) {
         double value = memory[memory_ptr];
         memoryCount[memory_ptr]++;
-        //getNextFreeLocation();
+        std::cout << "Data : --> " << value << " --> " << true << std::endl;
         return DataValue(value, true);
     }
     else {
+        std::cout << "Data : --> " << 0.0 << " --> " << false << std::endl;
         return DataValue(0.0, false); // Valeur invalide
     }
+    std::cout << std::endl;
+}
+
+void MEMORY::getMemory()
+{
+    std::cout << "Reading memory : " << label << std::endl;
+    int i = 0;
+    for(double data : memory){
+        std::cout << "{ " << data << " ; " << memoryCount[i] << " } | ";
+        i++;
+    }
+    std::cout << std::endl;
 }

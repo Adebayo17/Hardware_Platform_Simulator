@@ -26,6 +26,8 @@ class REGISTER {
         double size();
 
         void getRegister();
+
+        void resize(size_t newSize);
 };
 
 #endif

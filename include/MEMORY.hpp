@@ -30,6 +30,7 @@ class MEMORY : public SystemComponent
 		std::string getLabelFromSource();
 		void bindToSource(SystemComponent* src) override;
 		void getNextFreeLocation();
+		void getMemory();
 };
 
 #endif
