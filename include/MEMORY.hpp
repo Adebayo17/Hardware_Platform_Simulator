@@ -30,6 +30,7 @@ class MEMORY : public SystemComponent
 		void bindToSource(SystemComponent* src) override;
 		void getNextFreeLocation();
 		void getOldestValue();
+		// for test
 		void getMemory();
 };
 

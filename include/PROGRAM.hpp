@@ -49,7 +49,6 @@ class Program {
 		double compute();
 		bool allInstructionsExecuted() const;
 		void reset();
-        //void printProgramInstruction();
 };
 
 #endif

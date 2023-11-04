@@ -8,8 +8,6 @@
 #include <REGISTER.hpp>
 #include <DataValue.hpp>
 
-CPU::CPU() {}
-
 
 CPU::CPU(const std::string& fileName) {
 

@@ -88,13 +88,6 @@ bool Program::allInstructionsExecuted() const {
 void Program::reset() {
 	instructionPointer = 0;
 }
-/*
-void Program::printProgramInstruction()
-{
-	Instruction instr = instructions[instructionPointer];
-	std::cout << instr.type << " " << instr.operation << " " << instr.operand1 << " " << instr.operand2 << " --> " << instr.result << std::endl;
-}
-*/
 
 // Définir des fonctions pour chaque instruction
 double addition(double a, double b) 

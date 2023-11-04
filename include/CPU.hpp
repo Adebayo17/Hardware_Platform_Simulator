@@ -21,7 +21,6 @@ class CPU : public SystemComponent
         double activatedCore;
 
     public:
-	    CPU();
 		CPU(const std::string& fileName);
 	    void loadProgram();
 	    DataValue read() override;

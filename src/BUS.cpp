@@ -1,7 +1,6 @@
 #include <iostream>
 #include <BUS.hpp>
 
-BUS::BUS(){}
 
 BUS::BUS(const std::string& fileName) 
 {
