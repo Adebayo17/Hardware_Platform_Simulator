@@ -31,8 +31,6 @@ class BUS : public SystemComponent
 		void getPendingData();
 };
 
-void testBus();
-
 #endif
 
 

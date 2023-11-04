@@ -68,21 +68,26 @@ void DISPLAY::bindToSource(SystemComponent* src)
 
 void DISPLAY::simulate() 
 {
-    std::cout << "DISPLAY : " << label << " is simulated." << std::endl;
+    //std::cout << "DISPLAY : " << label << " is simulated." << std::endl;
     if (R == 0) {
         // Réagit une fois sur R
-        std::cout << "Can display " << std::endl; 
+        //std::cout << "Can display " << std::endl; 
         R = refresh;
         DataValue data;
         do {
             data = source->read();
             if (data.isValid()) {
-                std::cout << ">> " << data.getValue() << " <<" << std::endl;
+                oldestData = data;
+                std::cout << "++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
+                std::cout << "++++++     " << data.getValue() << "      +++++" << std::endl;
+                std::cout << "++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;  
             }
         } while (data.isValid());    
     }
     else {
-        std::cout << ">> " << "Wait before displaying " << " <<" << std::endl; 
+        std::cout << "++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
+        std::cout << "++     " << oldestData.getValue() << "      ++" << std::endl;
+        std::cout << "++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
         R--;
     }
 }

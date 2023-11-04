@@ -72,34 +72,34 @@ void BUS::bindToSource(SystemComponent* src)
 
 void BUS::simulate()
 {
-    std::cout << "BUS : " << label << " is simulated." << std::endl;
+    //std::cout << "BUS : " << label << " is simulated." << std::endl;
 	if(isBinded) {
-        getPendingData();
-        getReadyData();
-        std::cout << "Moving data... " << std::endl;
+        //getPendingData();
+        //getReadyData();
+        //std::cout << "Moving data... " << std::endl;
         for (auto it = pendingData.begin(); it != pendingData.end(); ) {
             readyData.push_back(std::move(*it));
             it = pendingData.erase(it);
         }
-        getPendingData();
-        getReadyData();
+        //getPendingData();
+        //getReadyData();
 
-        std::cout << "BUS : " << label << " Reading data from source : " << sourceLabel << std::endl;
+        //std::cout << "BUS : " << label << " Reading data from source : " << sourceLabel << std::endl;
         for(double i=0; i<width; i++) {
-            std::cout << i+1 << "-read" <<std::endl; 
+            //std::cout << i+1 << "-read" <<std::endl; 
             DataValue data;
             data = source->read();
             if(data.isValid()) {
                 pendingData.push_back(data);
-                getPendingData();
+                //getPendingData();
             }
             else {
                 std::cerr << "Error(from BUS.cpp) : Invalid Data read from source : " << sourceLabel << std::endl;
                 break;
             }  
         }
-        getPendingData();
-        getReadyData();
+        //getPendingData();
+        //getReadyData();
     } else {
         std::cerr << "(from BUS.cpp) No source bound." << std::endl;
     }
@@ -108,28 +108,21 @@ void BUS::simulate()
 
 DataValue BUS::read()
 {
-	std::cout << "BUS : " << label << " is being read" << std::endl;
-    getReadyData();
+	//std::cout << "BUS : " << label << " is being read" << std::endl;
+    //getReadyData();
     DataValue data;
 	if(!readyData.empty()) {
-        std::cout << "After reading : " << std::endl;
+        //std::cout << "After reading : " << std::endl;
 		data = readyData.front();
 		readyData.erase(readyData.begin());
 		counter++;
-        getReadyData();
+        //getReadyData();
 		return data;
 	}
 	else {
 		data = DataValue();	//default ctor (0.0, false)
 		return data;
 	}
-}
-
-void testBus()
-{
-    std::string fileName = "testdata/bus1.txt";
-    BUS myBus = BUS(fileName);
-    std::cout << myBus.getLabel() << " " << myBus.getSourceLabel() << " " << myBus.getType() << std::endl;
 }
 
 void BUS::getPendingData()

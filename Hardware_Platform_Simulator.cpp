@@ -16,10 +16,11 @@ int main()
 	std::cout << "---------------------------------------------------  END   : Binding Components   ---------------------------------------------------" <<std::endl;
 	std::cout << std::endl;
 	std::cout << "---------------------------------------------------  START : Simulation           ---------------------------------------------------" <<std::endl;
-	for(int i=0; i<544; i++) {
-		std::cout << std::endl;
-		std::cout << i+1 << "-********************SIMULATE" <<std::endl;
+	for(int i=0; i<41; i++) {
+		//std::cout << std::endl;
+		std::cout << i << "****DISPLAY" <<std::endl;
 		p1.simulate();
+		std::cout << std::endl;
 	}
 	std::cout << "---------------------------------------------------  END : Simulation             ---------------------------------------------------" <<std::endl;
 	return 0;

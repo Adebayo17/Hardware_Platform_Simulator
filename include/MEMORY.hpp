@@ -17,11 +17,10 @@ class MEMORY : public SystemComponent
 		int access;
 		int A;
 		bool isBinded;
-		std::vector<double> memory;
+		std::vector<DataValue> memory;
 		std::vector<int> memoryCount;
-		//SystemComponent* source;
-		//std::string sourceLabel;
 		int memory_ptr;
+		int oldest_value;
 	
 	public:
 		MEMORY(const std::string& fileName);
@@ -30,6 +29,7 @@ class MEMORY : public SystemComponent
 		std::string getLabelFromSource();
 		void bindToSource(SystemComponent* src) override;
 		void getNextFreeLocation();
+		void getOldestValue();
 		void getMemory();
 };
 

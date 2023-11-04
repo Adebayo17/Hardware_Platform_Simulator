@@ -12,6 +12,7 @@ MEMORY::MEMORY(const std::string& fileName)
 	textfile += fileName;
     isBinded = false;
     memory_ptr = 0;
+    oldest_value = 0;
     A = 0;
   
     std::string line;
@@ -64,7 +65,6 @@ void MEMORY::bindToSource(SystemComponent* src)
     if(src->getLabel() == sourceLabel && (isBinded == false)){
         source = src;
         isBinded = true;
-        //std::cout << "SystemComponent: " << label << " ... Source at : " << source << std::endl;
     }
     else {
         std::cerr << "Source is not compatible" << std::endl;
@@ -75,7 +75,7 @@ void MEMORY::bindToSource(SystemComponent* src)
 
 void MEMORY::simulate() 
 {
-    std::cout << "MEMORY : " << label << " is simulated." << std::endl;
+    //std::cout << "MEMORY : " << label << " is simulated." << std::endl;
     if (A == 0) {
             // Réagit une fois sur A
             A = access;
@@ -84,12 +84,12 @@ void MEMORY::simulate()
                 data = source->read();
                 if (data.isValid()) {
                     //writing in the memory
-                    memory[memory_ptr] = data.getValue();
+                    memory[memory_ptr] = data;
                     //initialize the count
                     memoryCount[memory_ptr] = 0;
                     //maj memery_ptr
                     getNextFreeLocation();
-                    getMemory();
+                    //getMemory();
                 }
             } while (data.isValid());
             
@@ -104,29 +104,36 @@ void MEMORY::getNextFreeLocation()
     memory_ptr = (memory_ptr + 1) % size;
 }
 
+void MEMORY::getOldestValue()
+{
+    oldest_value = (oldest_value +1) % size;
+}
+
 DataValue MEMORY::read()
 {
-    std::cout << "MEMORY : " << label << " is being read at " << memory_ptr << std::endl;
-    getMemory();
-    if (memoryCount[memory_ptr] < 1) {
-        double value = memory[memory_ptr];
-        memoryCount[memory_ptr]++;
-        std::cout << "Data : --> " << value << " --> " << true << std::endl;
-        return DataValue(value, true);
+    //std::cout << "MEMORY : " << label << " is being read at " << memory_ptr-1 << std::endl;
+    //getMemory();
+    DataValue data;
+    if (memoryCount[oldest_value] < 1) {
+        data = memory[oldest_value];
+        memoryCount[oldest_value]++;
+        getOldestValue();
+        //std::cout << "Data : --> " << value << " --> " << true << std::endl;
+        return data;
     }
     else {
-        std::cout << "Data : --> " << 0.0 << " --> " << false << std::endl;
-        return DataValue(0.0, false); // Valeur invalide
+        //std::cout << "Data : --> " << 0.0 << " --> " << false << std::endl;
+        return data; // Valeur invalide
     }
-    std::cout << std::endl;
+    //std::cout << std::endl;
 }
 
 void MEMORY::getMemory()
 {
-    std::cout << "Reading memory : " << label << std::endl;
+    //std::cout << "Reading memory : " << label << std::endl;
     int i = 0;
-    for(double data : memory){
-        std::cout << "{ " << data << " ; " << memoryCount[i] << " } | ";
+    for(DataValue data : memory){
+        std::cout << "{ (" << data.getValue() << "; " << data.isValid() << ") ; " << memoryCount[i] << " } | ";
         i++;
     }
     std::cout << std::endl;

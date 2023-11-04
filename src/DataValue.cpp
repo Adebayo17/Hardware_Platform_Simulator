@@ -29,6 +29,11 @@ void DataValue::setValid(bool newValid) {
 	valid = newValid;
 }
 
+void DataValue::readDataValue()
+{
+	std::cout << "(" << value << "; " << valid << ")";
+}
+
 void testDataValue() {
 	DataValue data;
 	std::cout << "Data : " << data.getValue() << " " << data.isValid() << std::endl;

@@ -17,6 +17,7 @@ class DISPLAY : public SystemComponent
         //SystemComponent* source;
         bool isBinded;
         int R;
+        DataValue oldestData;
 
     public:
         DISPLAY(const std::string& fileName);

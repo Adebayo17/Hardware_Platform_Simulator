@@ -21,6 +21,7 @@ class DataValue {
 		//setter
 		void setValue(double newValue);
 		void setValid(bool newValid);
+		void readDataValue();
 };
 
 // TEST

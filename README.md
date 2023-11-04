@@ -3,6 +3,6 @@
 ## Diagramme de classe :
 ![Logo Markdown](diagram/class-diagram.png)
 
-## To executate :
+## To execute :
 	$ ./execute.sh
 
